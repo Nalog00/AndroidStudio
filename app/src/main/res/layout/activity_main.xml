@@ -4,36 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".MainActivity">
 
     <LinearLayout
+
         android:id="@+id/layout1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:orientation="vertical"
-        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="400dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/layout2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/layout2"/>
+        app:layout_constraintTop_toTopOf="parent">
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="360dp"
+        android:src="@drawable/logotip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+
     <LinearLayout
         android:id="@+id/layout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@id/layout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/layout3"
-        app:layout_constraintTop_toBottomOf="@id/layout1"
-        app:layout_constraintBottom_toTopOf="@id/layout3"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1">
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Login"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/layout3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:background="@android:color/holo_green_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/layout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout4"
+        app:layout_constraintTop_toBottomOf="@id/layout2">
+        <EditText
+            android:id="@+id/edit2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="id"
+            android:layout_marginBottom="12dp"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout3">
+        <EditText
+            android:id="@+id/edit3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Password"
+            android:textSize="30sp"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout2"/>
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="OK"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
